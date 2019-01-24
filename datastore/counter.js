@@ -43,13 +43,13 @@ exports.getNextUniqueId = (callback) => {
     if (err) {
       writeCounter(0, (err, result) => {
         callback(err, result);
-      })
+      });
     } else {
-        writeCounter(num + 1, (err, result) => {
-            callback(err, result);
-        })
-      }
-  })
+      writeCounter(num + 1, (err, result) => {
+        callback(err, result);
+      });
+    }
+  });
 };
 
 
